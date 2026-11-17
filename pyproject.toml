@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unit-scope"
+version = "1.0.0"
+description = "pyvisa driver, CLI and PyQt6 panel for UNI-T oscilloscopes (UTD2000CEX / UTD7000B family)"
+license = { file = "LICENSE" }
+authors = [{ name = "RSP @KMUTNB" }]
+requires-python = ">=3.9"
+dependencies = ["pyvisa>=1.13"]
+
+[project.optional-dependencies]
+png = ["Pillow"]                 # screenshots
+gui = ["Pillow", "PyQt6"]        # the scope_gui panel
+
+[project.scripts]
+unit-scope = "unit_scope.cli:main"
+
+[project.gui-scripts]
+unit-scope-gui = "scope_gui.__main__:main"
+
+[tool.setuptools]
+packages = ["unit_scope", "scope_gui"]

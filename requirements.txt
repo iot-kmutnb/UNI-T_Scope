@@ -1,0 +1,6 @@
+pyusb
+libusb-package
+pyvisa
+pyvisa-py
+Pillow
+PyQt6

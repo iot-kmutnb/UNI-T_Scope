@@ -1,0 +1,22 @@
+# Python environment and caches (rebuilt with: python -m venv .venv; pip install -r requirements.txt)
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Vendor software archives (143 MB + 165 MB, over GitHub's 100 MB file limit): UNI-T Device Manager v2.9
+# (bundles the NI-VISA 15.5 Runtime) and UNI-T SDK v2.3. Keep them here locally; remove these two lines to track them.
+UNI-T_SW/*.rar
+UNI-T_SW/*.zip
+
+# docs/ is a local folder for UNI-T's manuals and datasheet (their copyright, not covered by this project's
+# license). Nothing in it is tracked.
+docs/
+
+# GUI error log copies / editor files
+*.log
+.vscode/
+.idea/
